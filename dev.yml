@@ -1,0 +1,20 @@
+version: "3"
+services:
+    web:
+        image: richarvey/nginx-php-fpm
+        container_name: webserver_dev
+        links:
+            - database
+        volumes:
+            - ".:/var/www/html/"
+        ports:
+            - "8080:80"
+    database:
+        image: mysql
+        container_name: mysql_dev
+        volumes:
+            - data-volume:/var/lib/mysql
+        environment:
+            - MYSQL_ROOT_PASSWORD=root
+volumes:
+    data-volume:
