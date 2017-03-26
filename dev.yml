@@ -6,7 +6,7 @@ services:
         links:
             - database
         volumes:
-            - ".:/var/www/html/"
+            - "..:/var/www/html/"
         ports:
             - "8080:80"
     database:
