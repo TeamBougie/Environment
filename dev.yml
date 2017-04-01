@@ -1,4 +1,4 @@
-version: "2"
+version: "3"
 services:
     web:
         image: richarvey/nginx-php-fpm
@@ -6,8 +6,8 @@ services:
         links:
             - database
         volumes:
-            - "..:/var/www/html/"  # Note to Windows users, must be prefixed by  //c/Users/ instead of ..
-            - "./nginx/config/sites-available:/etc/nginx/sites-available/"
+            - "//c/Users/Public/Sfprojects/aplaceforgeeks:/var/www/html"
+            - "//c/Users/Public/Sfprojects/aplaceforgeeks/Environment:/etc/nginx/sites-available"
         ports:
             - "8080:80"
     database:
