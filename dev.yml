@@ -7,7 +7,7 @@ services:
             - database
         volumes:
             - "..:/var/www/html/"  # Note to Windows users, must be prefixed by  //c/Users/ instead of ..
-            - "./nginx/config/sites-available:/etc/nginx/sites-available/"
+            - "nginx/config/sites-available:/etc/nginx/sites-available/"
         ports:
             - "8080:80"
     database:
