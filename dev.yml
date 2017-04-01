@@ -6,12 +6,8 @@ services:
         links:
             - database
         volumes:
-            # Sous Windows :
-            - "//c/Users/Public/Sfprojects/aplaceforgeeks:/var/www/html"
-            - "//c/Users/Public/Sfprojects/aplaceforgeeks/Environment:/etc/nginx/sites-available"
-            # Sous Linux/OSX :
-            #- "..:/var/www/html/"
-            #- "./nginx/config/sites-available:/etc/nginx/sites-available/"
+            - "..:/var/www/html/"
+            - "./nginx/config/sites-available:/etc/nginx/sites-available/"
         ports:
             - "8080:80"
     database:
